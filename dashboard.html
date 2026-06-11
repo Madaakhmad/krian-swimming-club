@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Anggota</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>KSC</h2>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        🏠 Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        👤 Profil Saya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        🏊 Jadwal Latihan
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        🏆 Event Saya
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                       onclick="logout()">
+                        🚪 Logout
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Profil -->
+            <div class="profile-box">
+
+                <h2>
+                    Informasi Anggota
+                </h2>
+
+                <p id="memberName"></p>
+
+                <p id="memberEmail"></p>
+
+            </div>
+
+            <!-- Statistik -->
+            <section class="event-stats">
+
+                <h2>
+                    Statistik Pendaftaran Event
+                </h2>
+
+                <div class="stats-summary">
+
+                    <div class="summary-card">
+
+                        <h3 id="totalPeserta">
+                            0
+                        </h3>
+
+                        <p>
+                            Total Peserta
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="chart-container">
+
+                    <canvas id="eventChart"></canvas>
+
+                </div>
+
+            </section>
+
+            <!-- Data Pendaftar -->
+            <section class="registration-section">
+
+                <h2>
+                    Data Pendaftar Event
+                </h2>
+
+                <div class="table-container">
+
+                    <table id="registrationTable">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>No Peserta</th>
+
+                                <th>Nama Atlet</th>
+
+                                <th>Umur</th>
+
+                                <th>No. WA</th>
+
+                                <th>Kategori</th>
+
+                                <th>Aksi</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Javascript Utama -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
